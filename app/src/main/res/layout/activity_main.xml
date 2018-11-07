@@ -7,28 +7,30 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/but5"
+        android:id="@+id/butDel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="0"
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot35"
-        app:layout_constraintEnd_toStartOf="@+id/butDot35"
+        android:text="←"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butPlusMinus"
+        app:layout_constraintEnd_toStartOf="@+id/butPlusMinus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/butDot35"
+        android:id="@+id/butPlusMinus"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/butDot24"
+        android:text="±"
+        app:layout_constraintBottom_toTopOf="@+id/but9"
         app:layout_constraintEnd_toStartOf="@+id/butEqualls5"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/but5"
+        app:layout_constraintStart_toEndOf="@+id/butDel"
         app:layout_constraintTop_toBottomOf="@+id/butDot29" />
 
     <Button
@@ -37,11 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="="
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot35"
+        android:text="С"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butPlusMinus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot35" />
+        app:layout_constraintStart_toEndOf="@+id/butPlusMinus" />
 
     <Button
         android:id="@+id/butDot27"
@@ -71,11 +73,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/butDot35"
+        app:layout_constraintBottom_toTopOf="@+id/butPlusMinus"
         app:layout_constraintEnd_toStartOf="@+id/butDot30"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/butDot28"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
         android:id="@+id/butDot30"
@@ -100,48 +102,48 @@
         app:layout_constraintStart_toEndOf="@+id/butDot30" />
 
     <Button
-        android:id="@+id/butDot22"
+        android:id="@+id/but7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot23"
-        app:layout_constraintEnd_toStartOf="@+id/butDot23"
+        android:text="7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but8"
+        app:layout_constraintEnd_toStartOf="@+id/but8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/butDot23"
+        android:id="@+id/but8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot24"
-        app:layout_constraintEnd_toStartOf="@+id/butDot24"
+        android:text="8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but9"
+        app:layout_constraintEnd_toStartOf="@+id/but9"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot22" />
+        app:layout_constraintStart_toEndOf="@+id/but7" />
 
     <Button
-        android:id="@+id/butDot24"
+        android:id="@+id/but9"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/butDot19"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/but6"
         app:layout_constraintEnd_toStartOf="@+id/butDot25"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot23"
-        app:layout_constraintTop_toBottomOf="@+id/butDot35" />
+        app:layout_constraintStart_toEndOf="@+id/but8"
+        app:layout_constraintTop_toBottomOf="@+id/butPlusMinus" />
 
     <Button
         android:id="@+id/butDot25"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot24"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but9"
         app:layout_constraintEnd_toStartOf="@+id/butDot26"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot24" />
+        app:layout_constraintStart_toEndOf="@+id/but9" />
 
     <Button
         android:id="@+id/butDot26"
@@ -156,48 +158,48 @@
         app:layout_constraintStart_toEndOf="@+id/butDot25" />
 
     <Button
-        android:id="@+id/butDot17"
+        android:id="@+id/but4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot18"
-        app:layout_constraintEnd_toStartOf="@+id/butDot18"
+        android:text="4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but5"
+        app:layout_constraintEnd_toStartOf="@+id/but5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/butDot18"
+        android:id="@+id/but5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot19"
-        app:layout_constraintEnd_toStartOf="@+id/butDot19"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but6"
+        app:layout_constraintEnd_toStartOf="@+id/but6"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot17" />
+        app:layout_constraintStart_toEndOf="@+id/but4" />
 
     <Button
-        android:id="@+id/butDot19"
+        android:id="@+id/but6"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/butDot9"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/but3"
         app:layout_constraintEnd_toStartOf="@+id/butDot20"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot18"
-        app:layout_constraintTop_toBottomOf="@+id/butDot24" />
+        app:layout_constraintStart_toEndOf="@+id/but5"
+        app:layout_constraintTop_toBottomOf="@+id/but9" />
 
     <Button
         android:id="@+id/butDot20"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot19"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but6"
         app:layout_constraintEnd_toStartOf="@+id/butDot21"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot19" />
+        app:layout_constraintStart_toEndOf="@+id/but6" />
 
     <Button
         android:id="@+id/butDot21"
@@ -236,7 +238,7 @@
         app:layout_constraintStart_toEndOf="@+id/butDot" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText"
         android:layout_width="360dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
@@ -252,7 +254,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textV" />
 
     <Button
         android:id="@+id/butDot"
@@ -265,17 +267,17 @@
         app:layout_constraintEnd_toStartOf="@+id/butEqualls"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/but0"
-        app:layout_constraintTop_toBottomOf="@+id/butDot9" />
+        app:layout_constraintTop_toBottomOf="@+id/but3" />
 
     <Button
-        android:id="@+id/butDot4"
+        android:id="@+id/but1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot10"
-        app:layout_constraintEnd_toStartOf="@+id/butDot10"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but2"
+        app:layout_constraintEnd_toStartOf="@+id/but2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -296,35 +298,35 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but3"
         app:layout_constraintEnd_toStartOf="@+id/butDot8"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot9" />
+        app:layout_constraintStart_toEndOf="@+id/but3" />
 
     <Button
-        android:id="@+id/butDot9"
+        android:id="@+id/but3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="."
+        android:text="3"
         app:layout_constraintBottom_toTopOf="@+id/butDot"
         app:layout_constraintEnd_toStartOf="@+id/butDot11"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot10"
-        app:layout_constraintTop_toBottomOf="@+id/butDot19" />
+        app:layout_constraintStart_toEndOf="@+id/but2"
+        app:layout_constraintTop_toBottomOf="@+id/but6" />
 
     <Button
-        android:id="@+id/butDot10"
+        android:id="@+id/but2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="."
-        app:layout_constraintBaseline_toBaselineOf="@+id/butDot9"
-        app:layout_constraintEnd_toStartOf="@+id/butDot9"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/but3"
+        app:layout_constraintEnd_toStartOf="@+id/but3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butDot4" />
+        app:layout_constraintStart_toEndOf="@+id/but1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textV"
         android:layout_width="360dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -333,8 +335,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="right"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
