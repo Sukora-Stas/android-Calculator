@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">android-Calculator</string>
     <string name="del">←</string>
+    <string name="PlusMinus">±</string>
+    <string name="clear">С</string>
+    <string name="memoryClear">MC</string>
+    <string name="memoryReload">MR</string>
+    <string name="mPlus">M+</string>
+    <string name="mMinus">M-</string>
+    <string name="ms">MS</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="square">√</string>
+    <string name="persent">%</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="plus">+</string>
+    <string name="multiply">*</string>
+    <string name="zero">0</string>
+    <string name="_equals">=</string>
+    <string name="dot">.</string>
+    <string name="_1">1</string>
+    <string name="divid">/</string>
+    <string name="minus">-</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
 </resources>
