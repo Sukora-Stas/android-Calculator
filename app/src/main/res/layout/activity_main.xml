@@ -6,13 +6,291 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/butDot27"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot28"
+        app:layout_constraintEnd_toStartOf="@+id/butDot10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butDot28"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot29"
+        app:layout_constraintEnd_toStartOf="@+id/butDot9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot4" />
+
+    <Button
+        android:id="@+id/butDot29"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/butDot11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot10"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <Button
+        android:id="@+id/butDot30"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot29"
+        app:layout_constraintEnd_toStartOf="@+id/butDot8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot9" />
+
+    <Button
+        android:id="@+id/butDot31"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot11" />
+
+    <Button
+        android:id="@+id/butDot22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot23"
+        app:layout_constraintEnd_toStartOf="@+id/butDot10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butDot23"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot24"
+        app:layout_constraintEnd_toStartOf="@+id/butDot9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot4" />
+
+    <Button
+        android:id="@+id/butDot24"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/butDot11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot10"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <Button
+        android:id="@+id/butDot25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot24"
+        app:layout_constraintEnd_toStartOf="@+id/butDot8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot9" />
+
+    <Button
+        android:id="@+id/butDot26"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot11" />
+
+    <Button
+        android:id="@+id/butDot17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot18"
+        app:layout_constraintEnd_toStartOf="@+id/butDot10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butDot18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot19"
+        app:layout_constraintEnd_toStartOf="@+id/butDot9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot4" />
+
+    <Button
+        android:id="@+id/butDot19"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/butDot11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot10"
+        app:layout_constraintTop_toBottomOf="@+id/butDot24" />
+
+    <Button
+        android:id="@+id/butDot20"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot19"
+        app:layout_constraintEnd_toStartOf="@+id/butDot8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot9" />
+
+    <Button
+        android:id="@+id/butDot21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/butDot11" />
+
+    <Button
+        android:id="@+id/but0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot"
+        app:layout_constraintEnd_toStartOf="@+id/butDot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butEqualls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="="
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butDot" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/butDot"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/butEqualls"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/but0"
+        app:layout_constraintTop_toBottomOf="@+id/butDot9" />
+
+    <Button
+        android:id="@+id/butDot4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot10"
+        app:layout_constraintEnd_toStartOf="@+id/butDot10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butDot8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butDot11" />
+
+    <Button
+        android:id="@+id/butDot11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot9"
+        app:layout_constraintEnd_toStartOf="@+id/butDot8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butDot9" />
+
+    <Button
+        android:id="@+id/butDot9"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/butDot11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butDot10"
+        app:layout_constraintTop_toBottomOf="@+id/butDot19" />
+
+    <Button
+        android:id="@+id/butDot10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/butDot9"
+        app:layout_constraintEnd_toStartOf="@+id/butDot9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butDot4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="360dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
