@@ -53,12 +53,19 @@ public class MainActivity extends AppCompatActivity {
     public void onNumberClick(View view) {
 
         Button button = (Button) view;
-        //number.setText("");
-        number.append(button.getText());
+        number.append(chekText(button));
 
         if (lastOperation.equals("=") && operand != null) {
             operand = null;
         }
+    }
+
+    private CharSequence chekText(Button button) {
+        if (!button.getText().equals("."))
+            if (number.getText().charAt(0) == '0' && number.getText().charAt(1) != '.') {
+                number.setText("");
+            }
+        return button.getText();
     }
 
     public void onOperationClick(View view) {
