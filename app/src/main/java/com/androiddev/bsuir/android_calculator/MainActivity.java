@@ -2,6 +2,7 @@ package com.androiddev.bsuir.android_calculator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         result = (TextView) findViewById(R.id.textResult);
         number = (EditText) findViewById(R.id.editText);
+        number.setInputType(InputType.TYPE_NULL);
     }
 
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public void onNumberClick(View view) {
 
         Button button = (Button) view;
+        //number.setText("");
         number.append(button.getText());
 
         if (lastOperation.equals("=") && operand != null) {
@@ -74,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         lastOperation = op;
-        result.append(lastOperation);
+        if (!(lastOperation.equals("=") || lastOperation.equals("C")))
+            result.append(lastOperation);
     }
 
     private void performOperation(Double _number, String operation) {
@@ -86,13 +90,14 @@ public class MainActivity extends AppCompatActivity {
             if (lastOperation.equals("=")) {
                 lastOperation = operation;
             }
+            System.out.println("test");
             switch (lastOperation) {
                 case "=":
                     operand = _number;
                     break;
                 case "/":
                     if (_number == 0) {
-                        operand = 0.0;
+                        result.setText("Недопустимая операция");
                     } else {
                         operand /= _number;
                     }
@@ -106,10 +111,14 @@ public class MainActivity extends AppCompatActivity {
                 case "-":
                     operand -= _number;
                     break;
+                case "С":
+                    this.number.setText("0");
+                    result.setText("0");
+                    return;
             }
         }
         result.setText(operand.toString().replace('.', ','));
-        this.number.setText("");
+        this.number.setText("0");
     }
 
 }
