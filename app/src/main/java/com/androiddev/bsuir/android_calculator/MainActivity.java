@@ -60,6 +60,20 @@ public class MainActivity extends AppCompatActivity {
         String op = button.getText().toString();
         String number = numberField.getText().toString();
         // если введенно что-нибудь
+        switch (op) {
+            case "C":
+                clearAll();
+                return;
+            case "←":
+                if (number.length() > 0)
+                    numberField.setText(numberField.getText().subSequence(0, numberField.length() - 1));
+                return;
+            case "√":
+                resultField.setText(String.valueOf(Math.sqrt(Double.valueOf(number))));
+                lastOperation = op;
+                operationField.setText(lastOperation);
+                return;
+        }
         if (number.length() > 0) {
             number = number.replace(',', '.');
             try {
@@ -70,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
         }
         lastOperation = op;
         operationField.setText(lastOperation);
+    }
+
+    private void clearAll() {
+        resultField.setText("");
+        numberField.setText("");
+        operationField.setText("");
+        lastOperation = "=";
+        operand = null;
     }
 
     private void performOperation(Double number, String operation) {
@@ -102,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
                 case "-":
                     operand -= number;
                     break;
+                case "%":
+                    operand *= number / 100;
+                    break;
+                case "√":
+                    operand = Math.sqrt(operand);
+                    break;
+
+
             }
         }
         resultField.setText(operand.toString().replace('.', ','));

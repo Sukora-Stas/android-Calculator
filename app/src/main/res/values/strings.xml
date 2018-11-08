@@ -2,7 +2,7 @@
     <string name="app_name">android-Calculator</string>
     <string name="del">←</string>
     <string name="PlusMinus">±</string>
-    <string name="clear">С</string>
+    <string name="clear">C</string>
     <string name="memoryClear">MC</string>
     <string name="memoryReload">MR</string>
     <string name="mPlus">M+</string>
