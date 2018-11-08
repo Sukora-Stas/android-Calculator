@@ -10,8 +10,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView textResult;
-    EditText editText;
+    TextView result;
+    EditText number;
+
+
+    Double operand = null;
+    String lastOperation = "=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +24,26 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("OPERATION", lastOperation);
+        if (operand != null)
+            outState.putDouble("OPERAND", operand);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        lastOperation = savedInstanceState.getString("OPERATION");
+        operand = savedInstanceState.getDouble("OPERAND");
+        result.setText(operand.toString());
+        result.append(lastOperation);
+    }
+
     private void initView() {
-        textResult = (TextView) findViewById(R.id.textResult);
-        editText = (EditText) findViewById(R.id.editText);
+        result = (TextView) findViewById(R.id.textResult);
+        number = (EditText) findViewById(R.id.editText);
     }
 
 
@@ -30,12 +51,18 @@ public class MainActivity extends AppCompatActivity {
     public void onNumberClick(View view) {
 
         Button button = (Button) view;
-        textResult.append(button.getText());
+        number.append(button.getText());
 
+        if (lastOperation.equals("=") && operand != null) {
+            operand = null;
+        }
     }
 
-    public void onOperationClick(View view){
+    public void onOperationClick(View view) {
 
+        Button button = (Button) view;
+        String op = button.getText().toString();
+        String number = this.number.getText().toString();
 
     }
 
