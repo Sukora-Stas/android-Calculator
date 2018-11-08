@@ -2,7 +2,6 @@ package com.androiddev.bsuir.android_calculator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,10 +10,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView result;
-    EditText number;
-
-
+    TextView resultField;
+    EditText numberField;
+    TextView operationField;
     Double operand = null;
     String lastOperation = "=";
 
@@ -22,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+
+        resultField = (TextView) findViewById(R.id.resultField);
+        numberField = (EditText) findViewById(R.id.numberField);
+        operationField = (TextView) findViewById(R.id.operationField);
     }
 
     @Override
@@ -38,94 +39,73 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         lastOperation = savedInstanceState.getString("OPERATION");
         operand = savedInstanceState.getDouble("OPERAND");
-        result.setText(operand.toString());
-        result.append(lastOperation);
+        resultField.setText(operand.toString());
+        operationField.setText(lastOperation);
     }
 
-    private void initView() {
-        result = (TextView) findViewById(R.id.textResult);
-        number = (EditText) findViewById(R.id.editText);
-        number.setInputType(InputType.TYPE_NULL);
-    }
-
-
-    // обработка нажатия на числовую кнопку
     public void onNumberClick(View view) {
 
         Button button = (Button) view;
-        number.append(chekText(button));
+        numberField.append(button.getText());
 
         if (lastOperation.equals("=") && operand != null) {
             operand = null;
         }
     }
 
-    private CharSequence chekText(Button button) {
-        if (!button.getText().equals("."))
-            if (number.getText().charAt(0) == '0' && number.getText().charAt(1) != '.') {
-                number.setText("");
-            }
-        return button.getText();
-    }
-
+    // обработка нажатия на кнопку операции
     public void onOperationClick(View view) {
 
         Button button = (Button) view;
         String op = button.getText().toString();
-        String _number = this.number.getText().toString();
-
+        String number = numberField.getText().toString();
         // если введенно что-нибудь
-        if (_number.length() > 0) {
-            _number = _number.replace(',', '.');
+        if (number.length() > 0) {
+            number = number.replace(',', '.');
             try {
-                performOperation(Double.valueOf(_number), op);
+                performOperation(Double.valueOf(number), op);
             } catch (NumberFormatException ex) {
-                number.setText("");
+                numberField.setText("");
             }
         }
         lastOperation = op;
-        if (!(lastOperation.equals("=") || lastOperation.equals("C")))
-            result.append(lastOperation);
+        operationField.setText(lastOperation);
     }
 
-    private void performOperation(Double _number, String operation) {
+    private void performOperation(Double number, String operation) {
 
         // если операнд ранее не был установлен (при вводе самой первой операции)
         if (operand == null) {
-            operand = _number;
+            operand = number;
         } else {
             if (lastOperation.equals("=")) {
                 lastOperation = operation;
             }
-            System.out.println("test");
             switch (lastOperation) {
                 case "=":
-                    operand = _number;
+                    operand = number;
                     break;
                 case "/":
-                    if (_number == 0) {
-                        result.setText("Недопустимая операция");
+                    if (number == 0) {
+                        resultField.setText("Nan");
+                        return;
                     } else {
-                        operand /= _number;
+                        operand /= number;
                     }
                     break;
                 case "*":
-                    operand *= _number;
+                    operand *= number;
                     break;
                 case "+":
-                    operand += _number;
+                    operand += number;
                     break;
                 case "-":
-                    operand -= _number;
+                    operand -= number;
                     break;
-                case "С":
-                    this.number.setText("0");
-                    result.setText("0");
-                    return;
             }
         }
-        result.setText(operand.toString().replace('.', ','));
-        this.number.setText("0");
+        resultField.setText(operand.toString().replace('.', ','));
+        numberField.setText("");
     }
 
 }
