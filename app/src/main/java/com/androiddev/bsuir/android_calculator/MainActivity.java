@@ -62,8 +62,54 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = (Button) view;
         String op = button.getText().toString();
-        String number = this.number.getText().toString();
+        String _number = this.number.getText().toString();
 
+        // если введенно что-нибудь
+        if (_number.length() > 0) {
+            _number = _number.replace(',', '.');
+            try {
+                performOperation(Double.valueOf(_number), op);
+            } catch (NumberFormatException ex) {
+                number.setText("");
+            }
+        }
+        lastOperation = op;
+        result.append(lastOperation);
+    }
+
+    private void performOperation(Double _number, String operation) {
+
+        // если операнд ранее не был установлен (при вводе самой первой операции)
+        if (operand == null) {
+            operand = _number;
+        } else {
+            if (lastOperation.equals("=")) {
+                lastOperation = operation;
+            }
+            switch (lastOperation) {
+                case "=":
+                    operand = _number;
+                    break;
+                case "/":
+                    if (_number == 0) {
+                        operand = 0.0;
+                    } else {
+                        operand /= _number;
+                    }
+                    break;
+                case "*":
+                    operand *= _number;
+                    break;
+                case "+":
+                    operand += _number;
+                    break;
+                case "-":
+                    operand -= _number;
+                    break;
+            }
+        }
+        result.setText(operand.toString().replace('.', ','));
+        this.number.setText("");
     }
 
 }
